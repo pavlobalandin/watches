@@ -25,15 +25,15 @@ class WatchHelper
 				continue;
 			}
 			$strategy = NULL;
-			switch(WatchHelper::getExtension($file)) {
-				case WatchHelper::EXT_XML:
+			switch(self::getExtension($file)) {
+				case self::EXT_XML:
 					$strategy = new XmlStrategy();
 					break;
-				case WatchHelper::EXT_JSON:
+				case self::EXT_JSON:
 					$strategy = new JsonStrategy();
 					break;
 				default:
-					throw new WatchException('Extension not supported: ' . FileUtil::getExtension($file) . '. File: ' . $file);
+					throw new WatchException('Extension not supported: ' . self::getExtension($file) . '. File: ' . $file);
 			}
 
 			$watch = new Watch($strategy);
