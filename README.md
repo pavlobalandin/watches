@@ -1,8 +1,6 @@
 Yet another Framework
 ====
 
-Project was created to play with Symfony3 framework basic behavior.
-
 The original task
 
 ```text
@@ -14,23 +12,23 @@ Fountain can be base64 encoded image or set of two parameters like color and siz
 Watches sample with image.
 
 {
-	"title": "Prim",
-	"price": "250000", // int
-	"description": "A watch with a water fountain picture",
-	"fountain": "R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" // base64 picture
+    "title": "Prim",
+    "price": "250000", // int
+    "description": "A watch with a water fountain picture",
+    "fountain": "R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" // base64 picture
 }
 
 
 Watches sample with parameterized fountain.
 
 {
-	"title": "Prim",
-	"price": "250000", // int
-	"description": "A watch with a water fountain picture",
-	"fountain": {
-		"color": "blue",
-		"height": "20cm"
-	}
+    "title": "Prim",
+    "price": "250000", // int
+    "description": "A watch with a water fountain picture",
+    "fountain": {
+        "color": "blue",
+        "height": "20cm"
+    }
 }
 
 Application should:
@@ -57,5 +55,6 @@ php public/index.php
 ## Launch tests
 
 ```bash
-vendor/bin/phpunit tests
+cd tests
+../vendor/bin/phpunit
 ```
